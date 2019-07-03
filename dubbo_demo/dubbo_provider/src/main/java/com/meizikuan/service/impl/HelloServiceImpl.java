@@ -2,6 +2,7 @@ package com.meizikuan.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.meizikuan.service.HelloService;
+import org.springframework.stereotype.Component;
 
 /**
  * \* Created with IntelliJ IDEA.
@@ -11,6 +12,7 @@ import com.meizikuan.service.HelloService;
  * \* Description:
  * \
  */
+@Component
 @Service(version = "${demo.service.version}")
 public class HelloServiceImpl implements HelloService {
 
