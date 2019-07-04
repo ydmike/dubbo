@@ -16,12 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Hello {
 
-    @Reference(version = "${demo.service.version}")
+    @Reference(version = "${demo.service.version}",url = "192.168.50.119:20880")
     private HelloService helloService;
 
     @RequestMapping("/")
     public String sayHello(){
-       return helloService.sayHello();
+        String say = helloService.sayHello();
+        System.out.println(say);
+        return say;
     }
 
 }
